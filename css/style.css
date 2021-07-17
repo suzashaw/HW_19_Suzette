@@ -1,0 +1,295 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+}
+header {
+  background-color: black;
+  padding: 15px;
+}
+header ul {
+  float: right;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header a {
+  display: inline-block;
+  padding: 0px 5px;
+}
+header p {
+  display: inline-block;
+}
+.heroImg {
+  background-color: black;
+  padding: 100px 15px;
+}
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  padding: 15px;
+  background-color: #bf0089;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+footer {
+  background-color: black;
+  padding: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer ul {
+  list-style: none;
+  padding-left: 5px;
+}
+footer li {
+  display: inline-block;
+  padding: 0px 7px;
+}
+.heading {
+  text-align: center;
+  padding: 15px 5px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* My UX Skills Section */
+.flexContainer {
+  display: flex;
+  padding: 60px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.flexContainer div {
+  width: 33%;
+  padding: 25px;
+}
+
+/* My Work Section */
+.myWork {
+  padding: 60px 30px;
+  padding-top: 0;
+  background-color: black;
+}
+.workGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 350px 350px 350px;
+  grid-template-areas:
+  "img1 content1"
+  "img2 content2"
+  "img3 content3"
+  ;
+}
+.workGrid img {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+.img1 {
+  grid-area: img1;
+}
+.img2 {
+  grid-area: img2;
+}
+.img3 {
+  grid-area: img3;
+}
+.img1, .img2, .img3, .content1, .content2, .content3 {
+  padding: 80px;
+}
+.content1 {
+  grid-area: content1;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content2 {
+  grid-area: content2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content3 {
+  grid-area: content3;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+ /* UI Interactions */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "arrow preload"
+  "loadingBar loadingBar"
+  "boxMove boxMove"
+  ;
+}
+.gridChild {
+  margin: 15px;
+  padding: 15px;
+  height: 200px;
+}
+.arrow {
+  grid-area: arrow;
+  text-align: center;
+}
+.preload {
+  grid-area: preload;
+  text-align: center;
+}
+.loadingBar {
+  grid-area: loadingBar;
+}
+.boxMove {
+  grid-area: boxMove;
+}
+
+.bounceMe {
+  animation: bounceArrow .7s infinite;
+}
+.spinMe {
+  animation: spin 2s infinite;
+}
+#progressbar {
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 61px;
+  padding: 3px;
+}
+#progressbar > .orangeBar {
+  background-color: #bf0089;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 5px;
+  animation: loadBar 4s;
+  animation-fill-mode: forwards;
+}
+.movingBox {
+  animation: movingBox 5s;
+  width: 50px;
+  height: 50px;
+  background-color: #bf0089;
+}
+
+
+@keyframes bounceArrow {
+  from {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 7px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes loadBar {
+  from {
+    width: 40%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes movingBox {
+  from {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    transform: translate3d(50px, 25px, 0px);
+  }
+  50% {
+    transform: translate3d(100px, 50px, 0px);
+  }
+  75% {
+    transform: translate3d(200px, 100px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+
+
+
+
+
+ /* Interactions with JS */
+div {
+  margin: 15px;
+}
+.button {
+  background-color: lightGrey;
+  padding: 15px;
+  cursor: pointer;
+  text-align:center;
+  max-width: 150px;
+}
+.hideMe {
+ background-color: red;
+ height: 150px;
+ width: 150px;
+}
+.cssChange {
+  background-color: blue;
+  height: 150px;
+  width: 150px;
+}
+.appendMe {
+  outline: 1px solid red;
+}
+.child {
+  background-color: grey;
+  text-align: center;
+}
+
+
+ /* Glow Effect */
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  border: 5px solid purple;
+  padding: 20px;
+  border-radius: 25% 10%;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
